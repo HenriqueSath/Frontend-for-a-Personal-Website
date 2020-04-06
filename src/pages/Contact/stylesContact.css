@@ -1,0 +1,128 @@
+#root
+
+.img img {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    width: 80%;
+    max-width: 800px;
+
+    position: absolute;
+    top: 20%;
+    left: 25%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+::-webkit-input-placeholder {
+   color: #ffefef;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #ffefef;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #ffefef;  
+}
+
+:-ms-input-placeholder {  
+   color: #ffefef;  
+}
+
+form input, textarea {
+    background: rgba(255, 255, 255, 0.137);
+
+    font-family: Roboto, Arial, sans-serif;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 12px;
+    outline: none;
+    font-size: 16px;
+
+    letter-spacing: 0.5px;
+
+    color: #ffefef;
+}
+
+form input{
+    height: 50px;
+
+    border-radius: 4px;
+}
+
+form textarea {
+    height: 100px;
+
+    resize: none;
+
+    border-radius: 4px;
+}
+
+form label {
+    font-family: Roboto, Arial, sans-serif;
+
+    color: #f0e6e6;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form div:nth-child(3),
+form div:nth-child(4),
+form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+form button {
+
+    font-family: Roboto, Arial, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 700;
+    width: 80px;
+    height: 30px;
+
+    border-radius: 4px;
+
+    border: none;
+    overflow: hidden;
+
+    background: #e09302;
+    color: #dfd9d9;
+
+    cursor: pointer;
+
+    grid-column: 2;
+    justify-self: end;
+
+    transition: all 0.5s;
+}
+
+form button:hover {
+    background: #f0e6e6;
+    color: #e09302;
+}
+
+form input:focus:invalid,
+form textarea:focus:invalid {
+    background: rgba(255, 255, 255, 0.137) url(../../assets/invalid.png) no-repeat 98% center;
+    border: 2px solid #e90e0e;
+    box-shadow: 0px 0px 5px #dd2828;
+}
+
+form input:focus:valid,
+form textarea:focus:valid {
+    background: rgba(255, 255, 255, 0.137) url(../../assets/valid.png) no-repeat 98% center;
+    border: 2px solid #0e880e;
+    box-shadow: 0px 0px 5px #069706;
+}
