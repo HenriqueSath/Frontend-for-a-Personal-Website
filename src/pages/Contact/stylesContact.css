@@ -22,19 +22,19 @@ form {
 }
 
 ::-webkit-input-placeholder {
-   color: #ffefef;
+   color: #c2c0c0ec;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #ffefef;  
+   color: #c2c0c0ec;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #ffefef;  
+   color: #c2c0c0ec;  
 }
 
 :-ms-input-placeholder {  
-   color: #ffefef;  
+   color: #c2c0c0ec;  
 }
 
 form input, textarea {
