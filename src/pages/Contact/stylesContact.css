@@ -13,6 +13,7 @@ form {
 
     position: absolute;
     top: 20%;
+    bottom: 20%;
     left: 25%;
 
     display: grid;
@@ -53,6 +54,8 @@ form input, textarea {
     letter-spacing: 0.5px;
 
     color: #ffefef;
+
+    transition: all 0.3s;
 }
 
 form input{

@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import Logo from '../../assets/logoTop.svg'
-import euLeft from '../../assets/eu.svg'
-import euRight from '../../assets/eu2.svg'
+import euRight from '../../assets/eu.svg'
+import euLeft from '../../assets/eu2.svg'
 
 import './stylesAbout.css'
 
