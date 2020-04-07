@@ -48,7 +48,7 @@ export default function About() {
                 <img src={euRight} alt="Foto do Henrique" />
 
                 <div className="textRight">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita vero sed unde numquam recusandae rem praesentium corporis laborum accusamus aliquam beatae fugiat commodi amet esse quia, alias iusto? Vero, maxime.</p>
+                    <p>Lorem ipsum atque sit amet consectetur, adipisicing elit. Expedita vero sed unde numquam recusandae rem praesentium corporis laborum accusamus aliquam beatae fugiat commodi amet esse quia, alias iusto? Vero, maxime.</p>
                 </div>
             </div>
         </div>
