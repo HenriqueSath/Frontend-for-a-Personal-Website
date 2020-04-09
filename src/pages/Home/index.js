@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Helmet from 'react-helmet'
 
 import Rosto from '../../assets/rostoHome.jpg'
 import LogoTop from '../../assets/logoTop.svg'
@@ -10,10 +11,13 @@ export default function Home() {
 
     return (
         <div className="homeContainer">
+            <Helmet>
+                <title>Home</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Helmet>
+
             <header>
-                <Link to='/'>
-                    <img src={LogoTop} className="" alt="Logomarca" />
-                </Link>
+                <img src={LogoTop} className="" alt="Logomarca" />
                 <nav>
                     <li>
                         <Link className='a' to="/socialmedias">

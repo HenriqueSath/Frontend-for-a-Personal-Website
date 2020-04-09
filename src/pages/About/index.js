@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Helmet from 'react-helmet'
 
 import Logo from '../../assets/logoTop.svg'
 import euRight from '../../assets/eu.svg'
@@ -11,8 +12,13 @@ export default function About() {
 
     return (
         <div className="aboutContainer">
+            <Helmet>
+                <title>About</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Helmet>
+
             <header>
-                <Link to='/'>
+                <Link className="a" to='/'>
                     <img src={Logo} className="" alt="Logomarca" />
                 </Link>
                 <nav>

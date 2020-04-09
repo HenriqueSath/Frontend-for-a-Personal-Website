@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Helmet from 'react-helmet'
+
 import { FiSend } from 'react-icons/fi'
 
 import LogoTop from '../../assets/logoTop.svg'
@@ -11,8 +13,13 @@ export default function Contact() {
 
     return (
         <div className="homeContainer">
+            <Helmet>
+                <title>Contact</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Helmet>
+
             <header>
-                <Link to='/'>
+                <Link className="a" to='/'>
                     <img src={LogoTop} className="" alt="Logomarca" />
                 </Link>
                 <nav>
