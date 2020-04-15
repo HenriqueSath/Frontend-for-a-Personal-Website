@@ -13,8 +13,12 @@ export default function About() {
 
     function handleClickToggle() {
         document.querySelector('div.menuSection').classList.toggle('on', show)
-        document.querySelector('body').classList.toggle('on')
+        document.querySelector('body').classList.toggle('on', show)
         show = !show
+    }
+
+    function changePage() {
+        document.querySelector('body').classList.toggle('on')
     }
 
     return (
@@ -34,17 +38,17 @@ export default function About() {
                     </div>
                     <nav>
                         <li>
-                            <Link className='a' to="/">
+                            <Link className='a' to="/" onClick={changePage}>
                                 Home
                         </Link>
                         </li>
                         <li>
-                            <Link className='a' to="/socialmedias">
+                            <Link className='a' to="/socialmedias" onClick={changePage}>
                                 Social Medias
                         </Link>
                         </li>
                         <li>
-                            <Link className='a' to="/contact">
+                            <Link className='a' to="/contact" onClick={changePage}>
                                 Contact
                         </Link>
                         </li>

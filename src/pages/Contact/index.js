@@ -18,6 +18,10 @@ export default function Contact() {
         show = !show
     }
 
+    function changePage() {
+        document.querySelector('body').classList.toggle('on')
+    }
+
     return (
         <div className="contactContainer">
             <Helmet>
@@ -35,17 +39,17 @@ export default function Contact() {
                     </div>
                     <nav>
                         <li>
-                            <Link className='a' to="/">
+                            <Link className='a' to="/" onClick={changePage}>
                                 Home
                         </Link>
                         </li>
                         <li>
-                            <Link className='a' to="/socialmedias">
+                            <Link className='a' to="/socialmedias" onClick={changePage}>
                                 Social Medias
                         </Link>
                         </li>
                         <li>
-                            <Link className='a' to="/about">
+                            <Link className='a' to="/about" onClick={changePage}>
                                 About
                         </Link>
                         </li>

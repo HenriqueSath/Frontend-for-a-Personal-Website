@@ -87,7 +87,7 @@ header nav li .a:hover {
         width: 100%;
         margin: 6px auto;
 
-        transition-duration: 0.3s;
+        transition-duration: 0.5s;
     }
 
     .menuToggle {
@@ -159,5 +159,11 @@ header nav li .a:hover {
     header img {
         width: 15%;
         margin-top: -10px;
+    }
+}
+
+@media (max-width: 320px) {
+    body.on {
+        overflow: hidden;
     }
 }

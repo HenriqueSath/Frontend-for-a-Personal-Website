@@ -16,6 +16,10 @@ export default function Home() {
         show = !show
     }
 
+    function changePage() {
+        document.querySelector('body').classList.toggle('on')
+    }
+
     return (
         <div className="homeContainer">
             <Helmet>
@@ -33,17 +37,17 @@ export default function Home() {
                     </div>
                     <nav>
                         <li>
-                            <Link className='a' to="/socialmedias">
+                            <Link className='a' to="/socialmedias" onClick={changePage}>
                                 Social Medias
                         </Link>
                         </li>
                         <li>
-                            <Link className='a' to="/about">
+                            <Link className='a' to="/about" onClick={changePage}>
                                 About
                         </Link>
                         </li>
                         <li>
-                            <Link className='a' to="/contact">
+                            <Link className='a' to="/contact" onClick={changePage}>
                                 Contact
                         </Link>
                         </li>

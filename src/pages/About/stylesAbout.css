@@ -1,3 +1,7 @@
+body.on {
+    overflow: hidden;
+}
+
 .aboutContainer {
     height: 100%;
 }
@@ -140,6 +144,9 @@ div div.textRight p {
 }
 
 @media (max-width: 320px) {
+    body.on {
+        overflow: hidden;
+    }
     html {
         font-size: 70%;
     }
@@ -150,21 +157,21 @@ div div.textRight p {
         font-size: 1.1rem;
     }
     .left img {
-        width: 114.5%;
+        width: 100%;
     }
     .right img {
         margin-top: 155px;
-        width: 114.5%;
+        width: 100%;
     }
     div div.textLeft p {
-        top: 45%;
+        top: 40%;
         text-align: center;
-        left: 45px;
+        left: 25px;
     }
     div div.textRight p {
-        top: 114%;
+        top: 105%;
         text-align: center;
-        left: 45px;
+        left: 25px;
         margin-bottom: 15px;
     }
 }

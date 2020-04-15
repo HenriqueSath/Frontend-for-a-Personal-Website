@@ -19,6 +19,10 @@ export default function SocialMedias() {
         show = !show
     }
 
+    function changePage() {
+        document.querySelector('body').classList.toggle('on')
+    }
+
     return (
         <div className="smContainer">
             <Helmet>
@@ -36,17 +40,17 @@ export default function SocialMedias() {
                     </div>
                     <nav>
                         <li>
-                            <Link className='a' to="/">
+                            <Link className='a' to="/" onClick={changePage}>
                                 Home
                         </Link>
                         </li>
                         <li>
-                            <Link className='a' to="/about">
+                            <Link className='a' to="/about" onClick={changePage}>
                                 About
                         </Link>
                         </li>
                         <li>
-                            <Link className='a' to="/contact">
+                            <Link className='a' to="/contact" onClick={changePage}>
                                 Contact
                         </Link>
                         </li>
