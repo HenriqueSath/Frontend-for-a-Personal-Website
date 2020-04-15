@@ -11,6 +11,13 @@ import image from '../../assets/socialmediasimage.svg'
 import './stylesSM.css'
 
 export default function SocialMedias() {
+    let show = true
+
+    function handleClickToggle() {
+        document.querySelector('div.menuSection').classList.toggle('on', show)
+        document.querySelector('body').classList.toggle('on')
+        show = !show
+    }
 
     return (
         <div className="smContainer">
@@ -21,60 +28,69 @@ export default function SocialMedias() {
 
             <header>
                 <img src={LogoTop} className="" alt="Logomarca" />
-                <nav>
-                    <li>
-                        <Link className='a' to="/">
-                            Home
+                <div className="menuSection">
+                    <div className="menuToggle" onClick={handleClickToggle}>
+                        <div className="one"></div>
+                        <div className="two"></div>
+                        <div className="three"></div>
+                    </div>
+                    <nav>
+                        <li>
+                            <Link className='a' to="/">
+                                Home
                         </Link>
-                    </li>
-                    <li>
-                        <Link className='a' to="/about">
-                            About
+                        </li>
+                        <li>
+                            <Link className='a' to="/about">
+                                About
                         </Link>
-                    </li>
-                    <li>
-                        <Link className='a' to="/contact">
-                            Contact
+                        </li>
+                        <li>
+                            <Link className='a' to="/contact">
+                                Contact
                         </Link>
-                    </li>
-                </nav>
+                        </li>
+                    </nav>
+                </div>
             </header>
 
-            <div className="img">
-                <img src={image} alt="Imagem do Henrique" />
-            </div>
+            <div className="main">
+                <div className="img">
+                    <img src={image} alt="Imagem do Henrique" />
+                </div>
 
-            <div id="socialMedias">
+                <div id="socialMedias">
 
 
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/HenriqueSath">
-                    <div className="iconGit">
-                        <FaGithub
-                            size={45}
-                        />
-                    </div>
-                </a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/sathlerhenrique/">
-                    <div className="iconIns">
-                        <FiInstagram
-                            size={45}
-                        />
-                    </div>
-                </a>
-                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/henricksathler">
-                    <div className="iconTt">
-                        <FaTwitter
-                            size={45}
-                        />
-                    </div>
-                </a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/HenriqueSathlerFS">
-                    <div className="iconFb">
-                        <FaFacebook
-                            size={45}
-                        />
-                    </div>
-                </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/HenriqueSath">
+                        <div className="iconGit">
+                            <FaGithub
+                                size={45}
+                            />
+                        </div>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/sathlerhenrique/">
+                        <div className="iconIns">
+                            <FiInstagram
+                                size={45}
+                            />
+                        </div>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/henricksathler">
+                        <div className="iconTt">
+                            <FaTwitter
+                                size={45}
+                            />
+                        </div>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/HenriqueSathlerFS">
+                        <div className="iconFb">
+                            <FaFacebook
+                                size={45}
+                            />
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
 

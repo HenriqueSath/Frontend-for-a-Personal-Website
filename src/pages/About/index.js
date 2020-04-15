@@ -9,6 +9,13 @@ import euLeft from '../../assets/eu2.svg'
 import './stylesAbout.css'
 
 export default function About() {
+    let show = true
+
+    function handleClickToggle() {
+        document.querySelector('div.menuSection').classList.toggle('on', show)
+        document.querySelector('body').classList.toggle('on')
+        show = !show
+    }
 
     return (
         <div className="aboutContainer">
@@ -18,46 +25,51 @@ export default function About() {
             </Helmet>
 
             <header>
-                <Link className="a" to='/'>
-                    <img src={Logo} className="" alt="Logomarca" />
-                </Link>
-                <nav>
-                    <li>
-                        <Link className='a' to="/">
-                            Home
+                <img src={Logo} className="" alt="Logomarca" />
+                <div className="menuSection">
+                    <div className="menuToggle" onClick={handleClickToggle}>
+                        <div className="one"></div>
+                        <div className="two"></div>
+                        <div className="three"></div>
+                    </div>
+                    <nav>
+                        <li>
+                            <Link className='a' to="/">
+                                Home
                         </Link>
-                    </li>
-                    <li>
-                        <Link className='a' to="/socialmedias">
-                            Social Medias
+                        </li>
+                        <li>
+                            <Link className='a' to="/socialmedias">
+                                Social Medias
                         </Link>
-                    </li>
-                    <li>
-                        <Link className='a' to="/contact">
-                            Contact
+                        </li>
+                        <li>
+                            <Link className='a' to="/contact">
+                                Contact
                         </Link>
-                    </li>
-                </nav>
+                        </li>
+                    </nav>
+                </div>
             </header>
 
 
+            <div className="main">
+                <div className="left">
+                    <img src={euLeft} alt="Foto do Henrique" />
 
-            <div className="left">
-                <img src={euLeft} alt="Foto do Henrique" />
-
-                <div className="textLeft">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque nulla consequuntur qui excepturi, minus enim nobis ullam alias, sequi odio error laudantium veritatis dolorum corrupti culpa blanditiis provident, dicta optio.</p>
+                    <div className="textLeft">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque nulla consequuntur qui excepturi, minus enim nobis ullam alias, sequi odio error laudantium veritatis dolorum corrupti culpa blanditiis provident, dicta optio.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div className="right">
-                <img src={euRight} alt="Foto do Henrique" />
+                <div className="right">
+                    <img src={euRight} alt="Foto do Henrique" />
 
-                <div className="textRight">
-                    <p>Lorem ipsum atque sit amet consectetur, adipisicing elit. Expedita vero sed unde numquam recusandae rem praesentium corporis laborum accusamus aliquam beatae fugiat commodi amet esse quia, alias iusto? Vero, maxime.</p>
+                    <div className="textRight">
+                        <p>Lorem ipsum atque sit amet consectetur, adipisicing elit. Expedita vero sed unde numquam recusandae rem praesentium corporis laborum accusamus aliquam beatae fugiat commodi amet esse quia, alias iusto? Vero, maxime.</p>
+                    </div>
                 </div>
             </div>
         </div>
-
     )
 }

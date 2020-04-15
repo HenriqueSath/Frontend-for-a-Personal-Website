@@ -137,7 +137,23 @@ form textarea:focus:valid {
     html {
         font-size: 80%;
     }
+
     form {
         width: 60%;
+    }
+}
+
+@media (max-width: 1024px) {
+    html {
+        font-size: 80%;
+    }
+
+    form div:nth-child(1),
+    form div:nth-child(2) {
+        grid-column: span 2;
+    }
+
+    form button {
+        margin-bottom: 20%;
     }
 }
